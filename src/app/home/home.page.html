@@ -1,20 +1,53 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="blue">
     <ion-title>
-      Blank
+      Component
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-segment color="blue" value="all">
+  <ion-segment-button value="select">
+    <ion-label>select</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="toggel">
+    <ion-label>toggle</ion-label>
+  </ion-segment-button>
+</ion-segment>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-searchbar color="dark"></ion-searchbar>
+
+<ion-list>
+  <ion-item>
+    <ion-select aria-label="Fruit" interface="popover" placeholder="เมนู">
+      <ion-select-option value="สินค้า">สินค้า</ion-select-option>
+      <ion-select-option value="คิวอาร์โค้ด">คิวอาร์โค้ด</ion-select-option>
+      <ion-select-option value="พูดคุย">พูดคุย</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<ion-button color="blue" expand="block" (click)="presentToast('middle')">ยืนยันรหัสผ่าน</ion-button>
+
+<ion-toggle [enableOnOffLabels]="true">ซ่อนเมนู</ion-toggle>
+
+<ion-content [fullscreen]="true">
+
 </ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button color="blue">
+    <ion-icon name="chevron-up-circle"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="white">
+      <ion-icon name="bag-handle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="white">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="white">
+      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
