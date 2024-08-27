@@ -6,6 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content [fullscreen]="true">
+  
 <ion-segment color="blue" value="all">
   <ion-segment-button value="select">
     <ion-label>select</ion-label>
@@ -30,8 +32,6 @@
 <ion-button color="blue" expand="block" (click)="presentToast('middle')">ยืนยันรหัสผ่าน</ion-button>
 
 <ion-toggle [enableOnOffLabels]="true">ซ่อนเมนู</ion-toggle>
-
-<ion-content [fullscreen]="true">
 
 </ion-content>
 
